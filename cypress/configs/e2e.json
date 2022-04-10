@@ -1,0 +1,5 @@
+{
+  "baseUrl": "http://127.0.0.1:8002",
+  "integrationFolder": "cypress/integration",
+  "testFiles": ["**/*.e2e.tests.*"]
+}

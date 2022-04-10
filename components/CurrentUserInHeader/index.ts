@@ -1,0 +1,1 @@
+export { CurrentUserInHeader } from "./CurrentUserInHeader";

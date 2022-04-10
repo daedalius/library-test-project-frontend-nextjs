@@ -1,0 +1,13 @@
+.row {
+  display: flex;
+  column-gap: 16px;
+}
+.row textarea {
+  flex-grow: 1;
+}
+
+.buttons {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}

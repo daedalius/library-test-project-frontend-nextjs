@@ -1,0 +1,23 @@
+.comments {
+  padding: 16px;
+  background-color: var(--background-color);
+}
+
+.commentActions {
+  cursor: pointer;
+}
+
+.comment + .comment {
+  margin-top: 8px;
+}
+
+.newComment {
+  margin-top: 16px;
+}
+.newCommentText {
+  width: 100%;
+  box-sizing: border-box;
+}
+.buttons {
+  margin-top: 8px;
+}

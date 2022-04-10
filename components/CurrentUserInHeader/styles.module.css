@@ -1,0 +1,7 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  column-gap: 8px;
+  color: var(--color);
+}

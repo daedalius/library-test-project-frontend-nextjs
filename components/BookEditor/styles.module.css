@@ -1,0 +1,23 @@
+.formRow {
+  display: flex;
+  column-gap: 16px;
+}
+.formRow + .formRow {
+  width: 100%;
+  margin-top: 16px;
+}
+.formRow label {
+  min-width: 100px;
+  text-align: right;
+}
+.formRow input,
+.formRow textarea,
+.formRow select {
+  flex-grow: 1;
+}
+
+.buttonsRow {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}

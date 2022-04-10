@@ -1,0 +1,26 @@
+.link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color);
+  padding: 8px 16px;
+  background-color: var(--background-color);
+  border: 2px solid var(--border-color);
+  border-bottom: none;
+  z-index: 2;
+}
+.link + .link {
+  left: -2px;
+}
+.link:not(.linkActive) {
+  background-color: var(--border-color);
+}
+
+.content {
+  position: relative;
+  top: -2px;
+  padding: 16px;
+  background-color: var(--background-color);
+  border: 2px solid var(--border-color);
+  z-index: 1;
+}

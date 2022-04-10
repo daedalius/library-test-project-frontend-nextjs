@@ -1,0 +1,16 @@
+.user {
+  display: flex;
+}
+
+.info {
+  flex-grow: 1;
+  text-align: end;
+}
+
+.login {
+  font-size: 36px;
+}
+
+.borrowedCopies {
+  margin-top: 32px;
+}

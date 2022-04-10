@@ -1,0 +1,13 @@
+.bookSearch {
+  margin: 0 auto 24px;
+  padding: 24px;
+  column-gap: 8px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--background-color);
+}
+
+.book + .book {
+  margin-top: 24px;
+}

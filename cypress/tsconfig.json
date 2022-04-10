@@ -1,0 +1,12 @@
+{
+  "sourceMap": true,
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": "/",
+    "lib": ["DOM", "ES2021"],
+    "types": ["cypress"],
+    "moduleResolution": "node"
+  },
+  "include": ["../cypress"],
+  "exclude": ["../src"]
+}
