@@ -1,20 +1,26 @@
 import { useEffect, useMemo, useState } from "react";
-import { CurrentUser } from "#components/contexts/CurrentUser";
-import { CurrentUserInHeader } from "#components/CurrentUserInHeader";
-import { SignOut } from "#components/SignOut";
+import Link from "next/link";
 
 import { fetchCurrentUser } from "#api/credentials";
 import { getBookCopiesBorrowedByUser } from "#api/copies";
-import { useRouter } from "next/router";
-import Link from "next/link";
+
+import { CurrentUser } from "#components/contexts/CurrentUser";
+import { CurrentUserInHeader } from "#components/CurrentUserInHeader";
+import { SignOut } from "#components/SignOut";
+import SignIn from "./sign-in";
+import SignUp from "./sign-up";
 
 import { IBookCopy } from "#entities/BookCopy";
 
 import "../styles/globals.css";
-
-export default function MyApp({ Component, pageProps, props, redirect }) {
-  const router = useRouter();
+export default function MyApp({
+  Component,
+  pageProps,
+  props,
+  router
+}) {
   useEffect(() => {
+    // Redirects to auth pages from others
     const isAuthRoute =
       router.pathname.endsWith("/sign-in") ||
       router.pathname.endsWith("/sign-up");
@@ -53,7 +59,13 @@ export default function MyApp({ Component, pageProps, props, redirect }) {
           {user ? <CurrentUserInHeader /> : null}
           {user ? <SignOut /> : null}
         </div>
-        <Component {...pageProps} />
+        {user ? (
+          <Component {...pageProps} />
+        ) : router.route === "/sign-up" ? (
+          <SignUp />
+        ) : (
+          <SignIn />
+        )}
       </div>
     </CurrentUser.Provider>
   );
